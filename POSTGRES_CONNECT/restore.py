@@ -11,8 +11,8 @@ from datetime import date
 
 def restore_table(host_name,database_name,user_name,database_password,table_name):
 
-    command = 'pg_restore -h {0} -d {1} -U {2} -p 5432 -t public.{3}_{4}< /Users/syed/Documents/{3}.psql'\
-    .format(host_name,database_name,user_name,table_name,date.today())
+    command = 'pg_restore -h {0} -d {1} -U {2} -p 5432 -t public.{3}< /Users/syed/Documents/{3}_B.psql'\
+    .format(host_name,database_name,user_name,table_name)
 
 
 

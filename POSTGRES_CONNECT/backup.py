@@ -10,7 +10,7 @@ from subprocess import PIPE,Popen
 
 def dump_table(host_name,database_name,user_name,database_password,table_name):
 
-    command = 'pg_dump -h {0} -d {1} -U {2} -p 5432 -t {3} -Fc -f /Users/syed/Documents/{3}.psql'\
+    command = 'pg_dump -h {0} -d {1} -U {2} -p 5432 -t {3} -Fc -f /Users/syed/Documents/{3}_B.psql'\
     .format(host_name,database_name,user_name,table_name)
 
     p = Popen(command,shell=True,stdin=PIPE)
