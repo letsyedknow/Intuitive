@@ -2,13 +2,13 @@ INSERT INTO
     USERS (USER_ID,USER_NAME,GAME_ID,CREDIT,LAST_POINTS,TOTAL_POINTS,LAST_LOGIN_TS)
 VALUES
 (	1001,'John',4001,0,10,100,CURRENT_TIMESTAMP	),
-(   1002,'Robin',4001,0,20,110,CURRENT_TIMESTAMP),,
-(	1003,'Rohan',4001,0,15,95,CURRENT_TIMESTAMP),,
-(	1004,'Swetha',4001,0,25,210,CURRENT_TISMESTAMP),;
+(   1002,'Robin',4001,0,20,110,CURRENT_TIMESTAMP),
+(	1003,'Rohan',4001,0,15,95,CURRENT_TIMESTAMP),
+(	1004,'Swetha',4001,0,25,210,CURRENT_TISMESTAMP);
 
 
 INSERT INTO 
-    CARD_ASSET (CARD_ASSET_ID,FILENAME,FILESIZE,ENCRYPT_CODE,LENGTH,WIDTH,LAST_LOGIN_TS)
+    CARD_ASSET (CARD_ASSET_ID,FILENAME,FILESIZE,ENCRYPT_CODE,LENGTH,WIDTH,LAST_UPD_TS)
 VALUES
 (2001,'https://storage.cloud.google.com/letsyedknow/image1',2048,'Google-managed key',1078,780,CURRENT_TIMESTAMP),
 (2002,'https://storage.cloud.google.com/letsyedknow/image2',2051,'Google-managed key',1080,781,CURRENT_TIMESTAMP),
@@ -20,7 +20,7 @@ VALUES
 (2008,'https://storage.cloud.google.com/letsyedknow/image8',2069,'Google-managed key',1092,787,CURRENT_TIMESTAMP),
 (2009,'https://storage.cloud.google.com/letsyedknow/image9',2072,'Google-managed key',1094,788,CURRENT_TIMESTAMP),
 (2010,'https://storage.cloud.google.com/letsyedknow/image10',2075,'Google-managed key',1096,789,CURRENT_TIMESTAMP),
-(2011,'https://storage.cloud.google.com/letsyedknow/image11',2078,'Google-managed key',1098,790,CURRENT_TIMESTAMPS),
+(2011,'https://storage.cloud.google.com/letsyedknow/image11',2078,'Google-managed key',1098,790,CURRENT_TIMESTAMP),
 (2012,'https://storage.cloud.google.com/letsyedknow/image12',2081,'Google-managed key',1100,791,CURRENT_TIMESTAMP),
 (2013,'https://storage.cloud.google.com/letsyedknow/image13',2084,'Google-managed key',1102,792,CURRENT_TIMESTAMP),
 (2014,'https://storage.cloud.google.com/letsyedknow/image14',2087,'Google-managed key',1104,793,CURRENT_TIMESTAMP),
@@ -190,3 +190,13 @@ VALUES
 (2178,'https://storage.cloud.google.com/letsyedknow/image178',2579,'Google-managed key',1112,813,CURRENT_TIMESTAMP),
 (2179,'https://storage.cloud.google.com/letsyedknow/image179',2582,'Google-managed key',1114,814,CURRENT_TIMESTAMP),
 (2180,'https://storage.cloud.google.com/letsyedknow/image180',2585,'Google-managed key',1116,815,CURRENT_TIMESTAMP);
+
+
+INSERT INTO 
+    FOOD (FOOD_TOKEN_ID,MAIN_FOOD,LAST_UPD_TS)
+    VALUES(3001,'INVERTTERBRATE',CURRENT_TIMESTAMP),
+    (3002,'SEED',CURRENT_TIMESTAMP),
+    (3003,'FISH',CURRENT_TIMESTAMP),
+    (3004,'FRUIT',CURRENT_TIMESTAMP),
+    (3005,'RODENT',CURRENT_TIMESTAMP);
+
