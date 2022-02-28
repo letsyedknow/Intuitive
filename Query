@@ -1,3 +1,11 @@
 ##Find the top3 fastest-speed bird associated with Wingspan, food-token and habitat(s).
 
-select b.* from (select bird_id,bird_name,food_token_id,habitat_id,wingspan,dense_rank() over(partition by habitat_id order by wingspan desc) as bird_rank from bird   ) b where b.bird_rank=1 ;
+select b.* from (select bird_id,bird_name,food_token_id,habitat_id,wingspan,dense_rank() over(partition by food_token_id,habitat_id order by wingspan desc) as bird_rank from bird   ) b where b.bird_rank=1 ;
+
+
+##Finds duplicates
+
+select b.* from bird b 
+join (select bird_name,food_token_id,habitat_id,count(1) from bird group by 1,2,3 having count(1)>=2  ) d 
+on b.bird_name=d.bird_name;
+
