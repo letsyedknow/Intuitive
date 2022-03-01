@@ -1,6 +1,6 @@
 3.A.--Find the top3 fastest-speed bird associated with Wingspan, food-token and habitat(s).
 
-select b.* from (select bird_id,bird_name,food_token_id,habitat_id,wingspan,dense_rank() over(partition by food_token_id,habitat_id order by wingspan desc) as bird_rank from bird   ) b where b.bird_rank=1 ;
+select b.* from (select bird_id,bird_name,food_token_id,habitat_id,wingspan,dense_rank() over(partition by habitat_id order by wingspan desc) as bird_rank from bird   ) b where b.bird_rank<=3 ;
 
 
 3.B.--DUPLICATES BASED ON BIRD_NAME,FOOD AND HABITAT 
